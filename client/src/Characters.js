@@ -7,10 +7,11 @@ const View = ({ characters }) => {
   // ToDo: Task 1c - show character image
   return (
     <>
-      {characters.map(({ name }) => (
+      {characters.map(({ name, image }) => (
         <Link key={name} to={`/character/${name}`}>
           <div className="character-list-item" key={name}>
             {/* ToDo: Task 1c - insert img-tag here */}
+            <img src={image}></img>
             <h1>{name}</h1>
           </div>
         </Link>
